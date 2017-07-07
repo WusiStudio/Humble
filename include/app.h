@@ -5,8 +5,21 @@
 
 namespace ROOT_SPACE
 {
-    class app: public ws::object
+    class app: public object
     {
+    public:
+        CREATEFUNC(app);
+    protected:
+
+        app(void);
+        ~app(void);
+
+        virtual int init(void) override;
+
+        virtual int destory(void) override;
+
+        
+    private:
 
     };
 }
