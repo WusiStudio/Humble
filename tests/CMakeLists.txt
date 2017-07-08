@@ -4,14 +4,17 @@ project(Humble-test)
 
 include_directories(include)
 include_directories(../include)
+
 include_directories(${GLFW_INCLUDE_DIR})
 include_directories(${IMEMORY_INCLUDE_DIR})
+
 
 aux_source_directory(src SRCS)
 
 add_executable(${PROJECT_NAME} ${SRCS})
 
 target_link_libraries(${PROJECT_NAME} Humble glfw)
+
 
 #输出路径
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/build/bin)

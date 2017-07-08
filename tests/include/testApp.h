@@ -19,6 +19,7 @@ namespace ROOT_SPACE
         virtual bool init(void) override;
 
         virtual bool destory(void) override;
+
     };
 }
 
