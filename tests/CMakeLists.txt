@@ -1,21 +1,20 @@
 cmake_minimum_required(VERSION 3.9.0)
 
-project(Humble)
+project(Humble-test)
 
 include_directories(include)
+include_directories(../include)
 include_directories(${GLFW_INCLUDE_DIR})
 include_directories(${IMEMORY_INCLUDE_DIR})
 
 aux_source_directory(src SRCS)
 
-ADD_LIBRARY(${PROJECT_NAME} ${SRCS})
+add_executable(${PROJECT_NAME} ${SRCS})
 
-find_path(VULKAN_INCLUDE_DIR NAMES vulkan/vulkan.h HINTS
-        "$ENV{VULKAN_SDK}/Include"
-        "$ENV{VK_SDK_PATH}/Include")
-if(VULKAN_INCLUDE_DIR)
-    include_directories(${VULKAN_INCLUDE_DIR})
-endif()
+target_link_libraries(${PROJECT_NAME} Humble glfw)
+
+#输出路径
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/build/bin)
 
 #设置编译选项-------------------------------------------
 IF(WIN32)
