@@ -1,7 +1,7 @@
 #pragma once
 #ifndef __APP_H__
 #define __APP_H__
-#include "../../IMemory/include/IMemory.h"
+#include "IMemory.h"
 
 namespace ROOT_SPACE
 {
@@ -14,10 +14,9 @@ namespace ROOT_SPACE
         app(void);
         ~app(void);
 
-        virtual int init(void) override;
+        virtual bool init(void) override;
 
-        virtual int destory(void) override;
-
+        virtual bool destory(void) override;
         
     private:
 

@@ -4,9 +4,26 @@ project(Humble)
 
 include_directories(include)
 
+if(GLFW_INCLUDE_DIR)
+    include_directories(${GLFW_INCLUDE_DIR})
+endif()
+
+if(IMEMORY_INCLUDE_DIR)
+    include_directories(${IMEMORY_INCLUDE_DIR})
+endif()
+
+if(VGRAPHICAL_INCLUDE_DIR)
+    include_directories(${VGRAPHICAL_INCLUDE_DIR})
+endif()
+
 aux_source_directory(src SRCS)
 
 ADD_LIBRARY(${PROJECT_NAME} ${SRCS})
+
+if(VULKAN_INCLUDE_DIR)
+    include_directories(${VULKAN_INCLUDE_DIR})
+endif()
+
 
 #设置编译选项-------------------------------------------
 IF(WIN32)
