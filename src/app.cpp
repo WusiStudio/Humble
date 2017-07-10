@@ -3,6 +3,7 @@
 #include "GLFW/glfw3.h"
 
 #include "VGraphical.h"
+
 #include "app.h"
 
 namespace ROOT_SPACE
