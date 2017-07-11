@@ -35,7 +35,7 @@ namespace ROOT_SPACE
             return true;
         }
 
-        if(initGraphical())
+        if(VGraphical::initGraphical())
         {
             return true;
         }
