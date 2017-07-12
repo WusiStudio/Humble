@@ -40,11 +40,14 @@ namespace ROOT_SPACE
             return true;
         }
 
+        mWindow = &window::Create();
+
         return false;
     }
 
     bool app::destory(void)
     {
+        glfwTerminate();
         return object::destory();
     }
 }
