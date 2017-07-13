@@ -1,7 +1,3 @@
-#define GLFW_INCLUDE_NONE
-#define GLFW_INCLUDE_VULKAN
-#include "GLFW/glfw3.h"
-
 #include "VGraphical.h"
 
 #include "app.h"
@@ -29,11 +25,6 @@ namespace ROOT_SPACE
         //------------------------------------------------------
         //init app running environment									
         //------------------------------------------------------
-        if (!glfwInit()) 
-        {
-            LOG.error("Cannot initialize GLFW.\nExiting ...");
-            return true;
-        }
 
         if(VGraphical::initGraphical())
         {
